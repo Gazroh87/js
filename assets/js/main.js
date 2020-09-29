@@ -1,3 +1,6 @@
+// Anything within curly brackets {} after a function is called function scoped
+// Anything within curly brackets {} after a statement is called block scoped
+
 // document.body.innerHTML = "This is some content";
 
 // String data type
@@ -193,3 +196,34 @@ function calc() {
   // console.log(calc);
   document.querySelector("#result").innerHTML = calc;
 }
+
+// SCOPES
+
+let number4 = 10; // Global scope - Variable is declared in the root of the file. It can be used anywhere
+
+function calc() {
+    return number4;
+}
+
+console.log(calc());
+
+function calc() {
+    let number5 = 10; // Local scope - Variable is declared in a function. console.log(number5); won't work
+    return number5;
+}
+
+console.log(calc());
+
+if (1 == 1) {
+    var b1 = 10;
+} 
+console.log(b1);
+
+if (1 == 1) {
+    let b2 = 10;
+} 
+// console.log(b2);
+
+const EXAMPLE = 10; // const variables cannot be changed as they are constant/constantly remain the same
+console.log(EXAMPLE);
+EXAMPLE = 120;
