@@ -1,4 +1,4 @@
-document.body.innerHTML = "This is some content";
+// document.body.innerHTML = "This is some content";
 
 // String data type
 let name = 'Gary "hello" Hughes ';
@@ -147,27 +147,49 @@ console.log(items7.push("Juice")); // Display the index number of the added valu
 console.log(items6, items7); // Display the updated arrays
 
 // NAMED FUNCTION - Stored at the top level inside JavaScript code. We can use this function whenever we want inside the code
-function testExample(a,b) {
-    let greeting = "Hi! My name is " + a;
-    // console.log(greeting);
-    return greeting; // Stores the variable but does not display it in the console
+function testExample(a, b) {
+  let greeting = "Hi! My name is " + a;
+  // console.log(greeting);
+  return greeting; // Stores the variable but does not display it in the console
 }
 
 let name2 = "Daniel";
 console.log(testExample("Nick"));
 console.log(testExample(name2));
 
-// ANONYMOUS FUNCTION - Equal to variable. The variable gets stored at the top level in the same way as the function. But we don't have the value from the function until we go down the file 
-let testExample2 = function(a) {
-     let greeting = "Hi! My name is " + a;
-    return greeting; // Stores the variable but does not display it in the console
-}
+// ANONYMOUS FUNCTION - Equal to variable. The variable gets stored at the top level in the same way as the function. But we don't have the value from the function until we go down the file
+let testExample2 = function (a) {
+  let greeting = "Hi! My name is " + a;
+  return greeting; // Stores the variable but does not display it in the console
+};
 
 let a = "Gary";
 console.log(testExample2(a));
 
-(function() {
-let greeting = "Hi! My name is Robert";
-console.log(greeting);
-}())
+(function () {
+  let greeting = "Hi! My name is Robert";
+  console.log(greeting);
+})();
 
+// CALCULATOR
+// Calculations must use number data types NOT strings
+function calc() {
+  // let a = document.querySelector("#value1").value; - (Outputs numbers as a string data type not number)
+  let a = parseInt(document.querySelector("#value1").value); // Converts stringed numbers to integer number data type)
+  let b = parseInt(document.querySelector("#value2").value); // Converts stringed numbers to integer number data type)
+  let oper = document.querySelector("#operator").value;
+  let calc;
+
+  if (oper == "add") {
+    calc = a + b;
+  } else if (oper == "min") {
+    calc = a - b;
+  } else if (oper == "div") {
+    calc = a / b;
+  } else if (oper == "mul") {
+    calc = a * b;
+  }
+
+  // console.log(calc);
+  document.querySelector("#result").innerHTML = calc;
+}
