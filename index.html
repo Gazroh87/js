@@ -1,30 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <h1>This is a heading!</h1>
-    <p>This is not a heading/title!</p>
-    <div id="section">
-      <p>This is a paragraph</p>
-    </div>
-    <form>
-      Value 1: <input type="text" id="value1" /> Value 2:
-      <input type="text" id="value2" />
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+	<nav></nav>
+	<h1>This is a heading!</h1>
+	<p>This is not a heading/title!</p>
+	<div id="section">
+		<!-- Divs have no specific content/purpose that is related to other boxes of content -->
+		<!-- Use ids for linking to sections in website -->
+		<!-- JavaScript relies on ids for injecting in to HTML -->
+		<p title="This is some website content!">This is a paragraph</p>
+	</div>
+	<section>
+		<h2>Latest posts</h2>
+		<h3>Here you can see all the latest posts</h3>
+		<article>
+			<h4>This is the post title</h4>
+			<p>This is some content inside this post</p>
+			<h5>Author: Daniel</h5>
+		</article>
+		<article>
+			<h4>This is the post title</h4>
+			<p>This is some content <br> inside this post</p>
+				<h5>Author: Daniel</h5>
+		</article>
+	</section>
+	<a href="#">This is a link</a>
+    
+	<form>
+		Value 1: <input type="text" id="value1" /> Value 2:
+		<input type="text" id="value2" />
       Operator:
-      <select name="" id="operator">
+		<select name="" id="operator">
         <option value="add">Add</option>
         <option value="min">Minus</option>
         <option value="div">Divide</option>
         <option value="mul">Multiply</option>
       </select>
-      <button type="button" onclick="calc()">Calculate</button>
-    </form>
-    <div id="result"></div>
-  </body>
-  <script src="assets/js/main.js"></script>
+		<button type="button" onclick="calc()">Calculate</button>
+	</form>
+	<div id="result"></div>
+</body>
+<script src="assets/js/main.js"></script>
+
 </html>

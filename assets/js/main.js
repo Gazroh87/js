@@ -160,7 +160,7 @@ let name2 = "Daniel";
 console.log(testExample("Nick"));
 console.log(testExample(name2));
 
-// ANONYMOUS FUNCTION - Equal to variable. The variable gets stored at the top level in the same way as the function. But we don't have the value from the function until we go down the file
+// ANONYMOUS FUNCTIONs - Equal to variable. The variable gets stored at the top level in the same way as the function. But we don't have the value from the function until we go down the file
 let testExample2 = function (a) {
   let greeting = "Hi! My name is " + a;
   return greeting; // Stores the variable but does not display it in the console
@@ -173,6 +173,13 @@ console.log(testExample2(a));
   let greeting = "Hi! My name is Robert";
   console.log(greeting);
 })();
+
+let a3 = function () {
+  let a3 = 20;
+  return a3;
+};
+
+console.log(a3());
 
 // CALCULATOR
 // Calculations must use number data types NOT strings
@@ -202,28 +209,34 @@ function calc() {
 let number4 = 10; // Global scope - Variable is declared in the root of the file. It can be used anywhere
 
 function calc() {
-    return number4;
+  return number4;
 }
 
 console.log(calc());
 
 function calc() {
-    let number5 = 10; // Local scope - Variable is declared in a function. console.log(number5); won't work
-    return number5;
+  let number5 = 10; // Local scope - Variable is declared in a function. console.log(number5); won't work
+  return number5;
 }
 
 console.log(calc());
 
 if (1 == 1) {
-    var b1 = 10;
-} 
+  var b1 = 10;
+}
 console.log(b1);
 
 if (1 == 1) {
-    let b2 = 10;
-} 
+  let b2 = 10;
+}
 // console.log(b2);
 
 const EXAMPLE = 10; // const variables cannot be changed as they are constant/constantly remain the same
 console.log(EXAMPLE);
-EXAMPLE = 120;
+// EXAMPLE = 120;
+
+let a2 = "First";
+let b = "Second";
+let c = "Third";
+
+console.log(a2 + " " + b + " " + c);
