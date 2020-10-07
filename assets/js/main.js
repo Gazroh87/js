@@ -159,6 +159,7 @@ function testExample(a, b) {
 let name2 = "Daniel";
 console.log(testExample("Nick"));
 console.log(testExample(name2));
+console.log(name2.length);
 
 // ANONYMOUS FUNCTIONs - Equal to variable. The variable gets stored at the top level in the same way as the function. But we don't have the value from the function until we go down the file
 let testExample2 = function (a) {
@@ -180,6 +181,40 @@ let a3 = function () {
 };
 
 console.log(a3());
+
+let toggleNavStatus = false;
+
+let toggleNav = function () {
+  let getSidebar = document.querySelector(".nav-sidebar");
+  let getSidebarUl = document.querySelector(".nav-sidebar ul");
+  let getSidebarTitle = document.querySelector(".nav-sidebar span");
+  let getSidebarLinks = document.querySelectorAll(".nav-sidebar a");
+
+  if (toggleNavStatus === false) {
+    getSidebarUl.style.visibility = "visible";
+    getSidebar.style.width = "272px";
+    getSidebarTitle.style.opacity = "0.5";
+
+    let arrayLength = getSidebarLinks.length;
+    for (let i = 0; i < arrayLength; i++) {
+      getSidebarLinks[i].style.opacity = "1";
+    }
+
+    toggleNavStatus = true;
+  } else if (toggleNavStatus === true) {
+    getSidebar.style.width = "50px";
+    getSidebarTitle.style.opacity = "0";
+
+    let arrayLength = getSidebarLinks.length;
+    for (let i = 0; i < arrayLength; i++) {
+      getSidebarLinks[i].style.opacity = "0";
+    }
+
+    getSidebarUl.style.visibility = "hidden";
+
+    toggleNavStatus = false;
+  }
+};
 
 // CALCULATOR
 // Calculations must use number data types NOT strings
@@ -240,3 +275,63 @@ let b = "Second";
 let c = "Third";
 
 console.log(a2 + " " + b + " " + c);
+
+let name01 = "Daniel";
+let eyeColor01 = "Blue";
+let age01 = 27;
+
+let name02 = "John";
+let eyeColor02 = "Brown";
+let age02 = 35;
+
+let name03 = "Jane";
+let eyeColor03 = "Brown";
+let age03 = 47;
+
+let updateAge = function (age) {
+  return ++age;
+};
+
+/*
+let person = new Object();
+
+person.name = "Daniel";
+person.eyeColor = "Blue";
+person.age = 27;
+person.updateAge = function() {
+    return ++person.age;
+}
+
+console.log(person.name);
+console.log(person.age);
+person.updateAge();
+console.log(person.age);
+*/
+
+/*
+let person = {
+  name: "Daniel",
+  eyeColor: "Blue",
+  age: 27,
+  updateAge: function () {
+    return ++person.age;
+  },
+};
+
+console.log(person);
+*/
+
+function Person(name, eyeColor, age) {
+  this.name = name;
+  this.eyeColor = eyeColor;
+  this.age = age;
+  this.updateAge = function () {
+    return ++this.age;
+  };
+}
+
+let person01 = new Person("Daniel", "Blue", 27);
+let person02 = new Person("Jane", "Brown", 43);
+
+console.log(person01.name);
+console.log(person01.updateAge());

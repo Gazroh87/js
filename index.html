@@ -16,7 +16,7 @@
       <!-- <div class="img-banner"> -->
       <a href="index.html" class="header-brand">GAZROH</a>
       <nav class="nav-main">
-        <div class="menu-wrapper btn-toggle-nav">
+        <div class="btn-toggle-nav" onclick="toggleNav()">
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
@@ -27,11 +27,24 @@
           <a href="cases.html" class="header-cases">Cases</a>
         </div>
       </nav>
+      <aside class="nav-sidebar">
+        <ul>
+          <li><span>Projects</span></li>
+          <li><a href="#">Making a website</a></li>
+          <li><a href="#">Creating a video</a></li>
+          <li><a href="#">SEO optimizing a website</a></li>
+          <li><a href="#">Walking through the park</a></li>
+          <li><a href="#">Just another day</a></li>
+        </ul>
+      </aside>
       <!-- </div> -->
     </header>
     <main>
       <section class="index-banner">
-        <h1>I AM A FREELANCE WEB <br> DEVELOPER</h1>
+        <h1>
+          I AM A FREELANCE WEB <br />
+          DEVELOPER
+        </h1>
         <h2>
           With specialty in back-end development, functionality, UX design, and
           Search Engine Optimization.
@@ -100,9 +113,9 @@
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
-        <a href="https://www.dafont.com/" target="_blank">
+        <a id="box-link" href="https://www.dafont.com/" target="_blank">
           <!-- Object link -->
-          <div id="box-link"></div>
+          <div id="link-box"></div>
         </a>
         <form>
           Value 1: <input type="text" id="value1" /> Value 2:
